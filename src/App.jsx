@@ -1,3 +1,19 @@
+import { Route } from 'react-router-dom';
+import { Switch } from 'react-router-dom';
+import Login from './views/Login';
+import Main from './views/Main';
+
 export default function App() {
-  return <h1>Hello World</h1>;
+  return (
+    <main>
+      <Switch>
+        <Route exact path="/">
+          <Main />
+        </Route>
+        <Route path="/login">
+          <Login />
+        </Route>
+      </Switch>
+    </main>
+  );
 }
