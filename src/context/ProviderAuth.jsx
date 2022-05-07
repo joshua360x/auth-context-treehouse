@@ -4,6 +4,7 @@ export const contextAuth = createContext();
 
 export function ProviderAuth({ children }) {
   const [userRecieved, setUserRecived] = useState(null);
+  const [entries, setEntries] = useState([])
 
   function loginUser(email, password) {
     const successfulLoginOfUser =
@@ -19,7 +20,7 @@ export function ProviderAuth({ children }) {
   }
 
   return (
-    <contextAuth.Provider value={{ userRecieved, logOutUser, loginUser }}>
+    <contextAuth.Provider value={{ userRecieved, logOutUser, loginUser, entries }}>
       {children}
     </contextAuth.Provider>
   );
