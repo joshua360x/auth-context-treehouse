@@ -10,9 +10,9 @@ export default function EntryList() {
 
   // take an array and map over it
 
-useEffect(() => {
+// useEffect(() => {
 
-}, [entries])
+// }, [entries])
 
 
   function handleSubmit() {
@@ -26,6 +26,7 @@ useEffect(() => {
 
   return (
     <div>
+      <h3>Submit an Entry</h3>
          <label htmlFor="name">
         name
         <input

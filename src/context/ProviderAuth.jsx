@@ -10,7 +10,7 @@ export function ProviderAuth({ children }) {
     const successfulLoginOfUser =
       email === 'jo@jow.com' && password === 'password';
 
-    successfulLoginOfUser ?? setUserRecived({ email });
+    successfulLoginOfUser ? setUserRecived({ email }) : '';
     return successfulLoginOfUser;
   }
 

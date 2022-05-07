@@ -8,14 +8,30 @@ export default function PrivateRoute({ children, ...rest }) {
 
   return (
     <Route
-      {...rest}
-      render={({ location }) =>
-        authFromDB.userRecieved ? (
-          children
-        ) : (
-          <Redirect to={{ pathname: '/login', state: { from: location } }} />
-        )
-      }
-    />
-  );
+    {...rest}
+    render={({ location }) =>
+    authFromDB.userRecieved ? (
+        children
+      ) : (
+        <Redirect
+          to={{
+            pathname: '/login',
+            state: { from: location },
+          }}
+        />
+      )
+    }
+  />
+);
+  //   <Route
+  //     {...rest}
+  //     render={({ location }) =>
+  //       authFromDB.userRecieved ? (
+  //         children
+  //       ) : (
+  //         <Redirect to={{ pathname: '/login', state: { from: location }, }} />
+  //       )
+  //     }
+  //   />
+  // );
 }

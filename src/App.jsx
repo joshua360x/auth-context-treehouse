@@ -15,8 +15,8 @@ export default function App() {
         <Route path="/login">
           <Login />
         </Route>
-        <PrivateRoute path='guestbook/views'>
-        <EntryList />
+        <PrivateRoute path="/guestbook/views">
+          <EntryList />
         </PrivateRoute>
       </Switch>
     </main>
